@@ -49,9 +49,6 @@ def place_from_viewport(gap_cm: float = 2.0):
     smc.set_static_mesh(mesh_to_place)
     smc.set_mobility(unreal.ComponentMobility.MOVABLE)
 
-    # 혹시 미세 겹침이 있으면 살짝 위로 밀어올림(옵션)
-    # new_actor.add_actor_world_offset(unreal.Vector(0, 0, 0.5), sweep=True)
-
     unreal.log(f"Spawned above '{base_actor.get_actor_label()}' at {spawn_loc}")
 
 
