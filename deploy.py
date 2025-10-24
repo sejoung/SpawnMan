@@ -1,4 +1,3 @@
-# Plugins/YourPlugin/Scripts/YourPlugin/deploy.py
 import json
 import os
 import zipfile
