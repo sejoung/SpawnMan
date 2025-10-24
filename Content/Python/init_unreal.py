@@ -59,16 +59,15 @@ def _add_context_menu():
     menus = unreal.ToolMenus.get()
 
     my_menu = menus.extend_menu("LevelEditor.ActorContextMenu")
-    section_name = f"CameraPlaceTool"
+    section_name = f"SpwnMan"
 
-    my_menu.add_section(section_name, "Camera Place Tool")
+    my_menu.add_section(section_name, "Spwn Man Tool")
 
     entry = unreal.ToolMenuEntry(
         name="MyPyTools.PyPlaceCtx",
         type=unreal.MultiBlockType.MENU_ENTRY
     )
-    entry.set_label("Py Place From Camera")
-    entry.set_tool_tip("Place selected asset in front of viewport camera")
+    entry.set_label("Spwn man")
     entry.set_string_command(
         type=unreal.ToolMenuStringCommandType.PYTHON,
         custom_type="",
