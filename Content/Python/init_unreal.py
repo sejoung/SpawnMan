@@ -17,7 +17,7 @@ def _get_selected_asset():
     return asset
 
 
-def place_from_viewport(gap_cm: float = 2.0, match_yaw: bool = True):
+def place_from_viewport(gap_cm: float = 2.0):
     base_actor = _get_first_selected_sma()
     if not base_actor:
         unreal.log_warning("No StaticMeshActor selected in the level.")
@@ -64,14 +64,14 @@ def _add_context_menu():
     my_menu.add_section(section_name, "Spwn Man Tool")
 
     entry = unreal.ToolMenuEntry(
-        name="MyPyTools.PyPlaceCtx",
+        name="SpwnMan.SpwnManCtx",
         type=unreal.MultiBlockType.MENU_ENTRY
     )
     entry.set_label("Spwn man")
     entry.set_string_command(
         type=unreal.ToolMenuStringCommandType.PYTHON,
         custom_type="",
-        string="import init_unreal as M; M.place_from_viewport()"
+        string="place_from_viewport()"
     )
     my_menu.add_menu_entry(section_name, entry)
 
