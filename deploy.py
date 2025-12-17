@@ -9,7 +9,7 @@ EXCLUDE_DIRS = {"Binaries", "Intermediate", "Saved", ".git", ".vs", "__pycache__
                 "LICENSE", "README.md", "requirements.txt", ".gitignore","CLAUDE.md"}
 EXCLUDE_EXTS = {".pdb", ".obj", ".exp", ".idb", ".log"}
 
-PLUGIN_NAME = "AutoOverViewMeshes"
+PLUGIN_NAME = "SpawnMan"
 
 
 def _project_dir() -> str:
