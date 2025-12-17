@@ -49,6 +49,13 @@ def place_from_viewport(gap_cm: float = 2.0):
     smc.set_static_mesh(mesh_to_place)
     smc.set_mobility(unreal.ComponentMobility.MOVABLE)
 
+    # 새 액터 선택 및 포커스 (F키 효과)
+    eas = unreal.get_editor_subsystem(unreal.EditorActorSubsystem)
+    eas.select_nothing()
+    eas.set_actor_selection_state(new_actor, True)
+    unreal.EditorLevelLibrary.editor_set_game_view(False)
+    unreal.SystemLibrary.execute_console_command(None, "CAMERA ALIGN ACTIVEVIEWPORTONLY")
+
     unreal.log(f"Spawned above '{base_actor.get_actor_label()}' at {spawn_loc}")
 
 
